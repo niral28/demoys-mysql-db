@@ -1,9 +1,11 @@
 <?php
+$url = parse_url(get_env("CLEARDB_DATABASE_URL"));
+$server = $url["host"];
+$username=$url["user"];
+$password=$url["pass"];
+$db=substr($url["path"],1);
 
-$db_name="diet";
-$mysql_user="root";
-$server_name="localhost";
-$connection=mysqli_connect($server_name,$mysql_user,"",$db_name);
+$connection=mysqli_connect($server,$username,$password,$db);
 if(!$connection){
   echo "Connection not successful";
   $httpStatusCode = 200;
