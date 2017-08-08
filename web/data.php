@@ -4,8 +4,8 @@ require "init.php";
 $u_username  = $_GET["username"];
 
 
-$sql_query="SELECT * from user_data where username like $u_username";
-echo '$u_username'
+$sql_query="SELECT * from user_data where username like '$u_username'";
+echo $u_username
 $encode = array();
 
 while($row = mysqli_fetch_assoc($sql_query)) {
