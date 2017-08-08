@@ -4,7 +4,7 @@ require "init.php";
 $u_username  = $_GET["username"];
 
 
-$sql_query="SELECT * from user_data where username like '$u_username'";
+$sql_query="SELECT * from user_data";
 $result = mysqli_query($connection,$sql_query);
 
 if($result)
@@ -14,13 +14,13 @@ if($result)
   header('Status: '.$httpStatusCode.' '.$httpStatusMsg);
 
   $encode = array();
-  if(mysqli_num_rows($result)>0){
+  if($result->num_rows > 0){
     while($row = mysqli_fetch_assoc($result)) {
        $encode[] = $row;
     }
     echo "results >0\n";
- }
- //echo "Connection successful\n"
+  }
+ echo "Connection successful\n"
  echo json_encode($encode);
 }
 else{
