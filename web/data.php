@@ -1,13 +1,11 @@
 <?php
 
 require "init.php";
-$u_username  = $_GET["username"];
+$u_username  = $_POST["username"];
 
 
 $sql_query="SELECT * from user_data where username like '" . $u_username . "'";
 $result = mysqli_query($connection,$sql_query);
-
-echo "'.$u_username.'";
 
 if($result)
 {
