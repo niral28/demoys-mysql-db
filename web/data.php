@@ -20,7 +20,7 @@ if($result)
     }
     echo "results >0\n";
   }
- echo "Connection successful\n"
+ echo "Connection successful\n";
  echo json_encode($encode);
 }
 else{
