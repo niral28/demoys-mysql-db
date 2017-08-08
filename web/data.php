@@ -18,6 +18,7 @@ if($result)
     while($row = mysqli_fetch_assoc($result)) {
        $encode[] = $row;
     }
+    echo "results >0\n";
  }
  //echo "Connection successful\n"
  echo json_encode($encode);
