@@ -4,7 +4,7 @@ require "init.php";
 $u_username  = $_GET["username"];
 
 
-$sql_query="SELECT * from user_data where username like '$u_username'";
+$sql_query="SELECT * from user_data";
 $result = mysqli_query($connection,$sql_query);
 
 echo $u_username;
