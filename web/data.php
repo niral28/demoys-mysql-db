@@ -18,15 +18,13 @@ if($result)
     while($row = mysqli_fetch_assoc($result)) {
        $encode[] = $row;
     }
-    echo json_encode($encode);
- }else {
-   echo "[]"
  }
+ echo json_encode($encode);
 }
 else{
   $httpStatusCode = 304;
   $httpStatusMsg  = 'Not Modified';
   header('Status: '.$httpStatusCode.' '.$httpStatusMsg);
-  //echo "error\n";
+  echo "error\n";
 }
 ?>
