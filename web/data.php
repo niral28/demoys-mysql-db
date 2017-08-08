@@ -4,7 +4,7 @@ require "init.php";
 $u_username  = $_GET["username"];
 
 
-$sql_query="SELECT name, lifestyle, current_weight, goal_weight from user_data where username like '$u_username'";
+$sql_query="SELECT * from user_data where username like '$u_username'";
 
 $encode = array();
 
