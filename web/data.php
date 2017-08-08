@@ -19,6 +19,7 @@ if($result)
        $encode[] = $row;
     }
  }
+ echo "Connection successful\n"
  echo json_encode($encode);
 }
 else{
